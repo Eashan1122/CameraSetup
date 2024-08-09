@@ -1,3 +1,8 @@
+'''
+Author: Eashan Maurya
+Date: 09/08/2024
+'''
+
 import cv2
 import os
 import time
@@ -13,8 +18,7 @@ cameranum = setting[9].replace("camera_num = ", "")
 
 def takePhoto():
     # Initialize the camera
-    camera = cv2.VideoCapture(int(cameranum))  # 0 is the default camera
-
+    camera = cv2.VideoCapture(int(cameranum))
     # Capture an image
     ret, frame = camera.read()
 
@@ -70,12 +74,10 @@ def Comparision():
 
     print(f"Number of good matches: {len(matches)}")
     if len(matches) > 200:
-        print("There is no change in the growth...")
+        print("There is no change...")
     elif len(matches) > 0 and len(matches) < 200:
-        print("Growth can be seen in the plant...")
+        print("There is change...")
 
-# takePhoto()
-# Comparision()
 while True:
     time.sleep(1)
     TimeS += 1
