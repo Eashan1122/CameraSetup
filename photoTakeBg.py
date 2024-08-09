@@ -7,7 +7,7 @@ directory = os.getcwd()
 TimeS = 0
 comcheck = 0
 
-config_file = open(f"{directory}/_internal/config.txt", "r")
+config_file = open(f"{directory}/config.txt", "r")
 setting = config_file.readlines()
 cameranum = setting[9].replace("camera_num = ", "")
 
